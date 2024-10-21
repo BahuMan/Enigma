@@ -17,3 +17,8 @@ https://www.cryptomuseum.com/crypto/enigma/msg/p1030681.htm
 
 This page also shows the Donitz message, but fails to explain how the indicator gruppe "DUHF TETO" translates to "QEOB" as rotor position for the remainder of the message
 https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030681
+
+# Assets
+
+https://www.artstation.com/artwork/wJgK5O
+https://sketchfab.com/3d-models/enigma-machine-30b85c037a164174a109ad6f002b9c47
