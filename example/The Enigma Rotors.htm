@@ -1,0 +1,129 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><title>The Enigma Rotors</title><script type="text/javascript" async="" src="The%20Enigma%20Rotors_files/ga.js"></script><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37411835-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body bgcolor="#FFFFFF" link="#800000" vlink="#400000">
+<table width="100%" cellpadding="12"><tbody><tr bgcolor="#c0c0c0"> <td>
+<font face="verdana">
+<h1>Technical Specification of the Enigma </h1>
+
+</font></td><td align="center"><a href="https://www.codesandciphers.org.uk/index.htm"><img width="109" height="141" border="0" src="The%20Enigma%20Rotors_files/tonysmall.jpg"><font face="verdana" size="2"><br>Tony Sale's <br>Codes and Ciphers</font></a></td></tr></tbody></table>
+<p></p><hr><br><p>
+<font face="verdana">
+This is a supplementary page for Tony Sale's <a href="https://www.codesandciphers.org.uk/enigma/index.htm">sequence of pages on the Enigma,</a>
+ gives the detailed technical specifications of the Enigma rotors (or wheels), and reflectors.
+</font></p><p><font face="verdana">
+</font></p><h2><font face="verdana">Technical specifications of the Enigma rotors</font></h2><font face="verdana">
+
+These are the permutations performed by the rotors:<p>
+
+<table border="1" cellpadding="1">
+
+<tbody><tr><td width="70"><b>INPUT</b></td> <td><b>A</b></td> <td><b>B</b></td> <td><b>C</b></td> <td><b>D</b></td> <td><b>E</b></td> <td><b>F</b></td> <td><b>G</b></td> <td><b>H</b></td> <td><b>I</b></td> <td><b>J</b></td> <td><b>K</b></td> <td><b>L</b></td><td><b>M</b></td> <td><b>N</b></td> <td><b>O</b></td> <td><b>P</b></td> <td><b>Q</b></td> <td><b>R</b></td> <td><b>S</b></td> <td><b>T</b></td> <td><b>U</b></td> <td><b>V</b></td> <td><b>W</b></td><td><b>X</b></td> <td><b>Y</b></td> <td><b>Z</b></td>  </tr>
+
+<tr><td width="70">Rotor I</td> <td>E</td> <td>K</td> <td>M</td> <td>F</td> <td>L</td> <td>G</td> <td>D</td> <td>Q</td> <td>V</td> <td>Z</td> <td>N</td> <td>T</td><td>O</td> <td>W</td> <td>Y</td> <td>H</td> <td>X</td> <td>U</td> <td>S</td> <td>P</td> <td>A</td> <td>I</td> <td>B</td><td>R</td> <td>C</td> <td>J</td>  </tr>
+
+<tr><td width="70">Rotor II</td> <td>A</td> <td>J</td> <td>D</td> <td>K</td> <td>S</td> <td>I</td> <td>R</td> <td>U</td> <td>X</td> <td>B</td> <td>L</td> <td>H</td><td>W</td> <td>T</td> <td>M</td> <td>C</td> <td>Q</td> <td>G</td> <td>Z</td> <td>N</td> <td>P</td> <td>Y</td> <td>F</td><td>V</td> <td>O</td> <td>E</td>  </tr>
+
+<tr><td width="70">Rotor III</td> <td>B</td> <td>D</td> <td>F</td> <td>H</td> <td>J</td> <td>L</td> <td>C</td> <td>P</td> <td>R</td> <td>T</td> <td>X</td> <td>V</td><td>Z</td> <td>N</td> <td>Y</td> <td>E</td> <td>I</td> <td>W</td> <td>G</td> <td>A</td> <td>K</td> <td>M</td> <td>U</td><td>S</td> <td>Q</td> <td>O</td>  </tr>
+
+<tr><td width="70">Rotor IV</td> <td>E</td> <td>S</td> <td>O</td> <td>V</td> <td>P</td> <td>Z</td> <td>J</td> <td>A</td> <td>Y</td> <td>Q</td> <td>U</td> <td>I</td><td>R</td> <td>H</td> <td>X</td> <td>L</td> <td>N</td> <td>F</td> <td>T</td> <td>G</td> <td>K</td> <td>D</td> <td>C</td><td>M</td> <td>W</td> <td>B</td>  </tr>
+
+<tr><td width="70">Rotor V</td> <td>V</td> <td>Z</td> <td>B</td> <td>R</td> <td>G</td> <td>I</td> <td>T</td> <td>Y</td> <td>U</td> <td>P</td> <td>S</td> <td>D</td><td>N</td> <td>H</td> <td>L</td> <td>X</td> <td>A</td> <td>W</td> <td>M</td> <td>J</td> <td>Q</td> <td>O</td> <td>F</td><td>E</td> <td>C</td> <td>K</td>  </tr>
+
+<tr><td width="70">Rotor VI</td> <td>J</td> <td>P</td> <td>G</td> <td>V</td> <td>O</td> <td>U</td> <td>M</td> <td>F</td> <td>Y</td> <td>Q</td> <td>B</td> <td>E</td><td>N</td> <td>H</td> <td>Z</td> <td>R</td> <td>D</td> <td>K</td> <td>A</td> <td>S</td> <td>X</td> <td>L</td> <td>I</td><td>C</td> <td>T</td> <td>W</td>  </tr>
+
+<tr><td width="70">Rotor VII</td> <td>N</td> <td>Z</td> <td>J</td> <td>H</td> <td>G</td> <td>R</td> <td>C</td> <td>X</td> <td>M</td> <td>Y</td> <td>S</td> <td>W</td><td>B</td> <td>O</td> <td>U</td> <td>F</td> <td>A</td> <td>I</td> <td>V</td> <td>L</td> <td>P</td> <td>E</td> <td>K</td><td>Q</td> <td>D</td> <td>T</td>  </tr>
+
+<tr><td width="70">Rotor VIII</td> <td>F</td> <td>K</td> <td>Q</td> <td>H</td> <td>T</td> <td>L</td> <td>X</td> <td>O</td> <td>C</td> <td>B</td> <td>J</td> <td>S</td><td>P</td> <td>D</td> <td>Z</td> <td>R</td> <td>A</td> <td>M</td> <td>E</td> <td>W</td> <td>N</td> <td>I</td> <td>U</td><td>Y</td> <td>G</td> <td>V</td>  </tr>
+
+<tr><td width="70">Beta rotor</td> <td>L</td> <td>E</td> <td>Y</td> <td>J</td> <td>V</td> <td>C</td> <td>N</td> <td>I</td> <td>X</td> <td>W</td> <td>P</td> <td>B</td><td>Q</td> <td>M</td> <td>D</td> <td>R</td> <td>T</td> <td>A</td> <td>K</td> <td>Z</td> <td>G</td> <td>F</td> <td>U</td><td>H</td> <td>O</td> <td>S</td>  </tr>
+
+<tr><td width="70">Gamma rotor</td> <td>F</td> <td>S</td> <td>O</td> <td>K</td> <td>A</td> <td>N</td> <td>U</td> <td>E</td> <td>R</td> <td>H</td> <td>M</td> <td>B</td><td>T</td> <td>I</td> <td>Y</td> <td>C</td> <td>W</td> <td>L</td> <td>Q</td> <td>P</td> <td>Z</td> <td>X</td> <td>V</td><td>G</td> <td>J</td> <td>D</td>  </tr>
+</tbody></table>
+</p><p>
+These permutations can also be given in the cycle representation:</p><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td>Rotor I</td><td>(AELTPHQXRU) (BKNW) (CMOY) (DFG) (IV) (JZ) (S)</td></tr>
+<tr><td>Rotor II</td><td>(FIXVYOMW) (CDKLHUP) (ESZ) (BJ) (GR) (NT) (A) (Q)</td></tr>
+<tr><td>Rotor III</td><td>(ABDHPEJT) (CFLVMZOYQIRWUKXSG) (N)</td></tr>
+<tr><td>Rotor IV</td><td>(AEPLIYWCOXMRFZBSTGJQNH) (DV) (KU)</td></tr>
+<tr><td>Rotor V</td><td>(AVOLDRWFIUQ)(BZKSMNHYC) (EGTJPX)</td></tr>
+<tr><td>Rotor VI</td><td>(AJQDVLEOZWIYTS) (CGMNHFUX) (BPRK)</td></tr>
+<tr><td>Rotor VII</td><td>(ANOUPFRIMBZTLWKSVEGCJYDHXQ)</td></tr>
+<tr><td>Rotor VIII</td><td>(AFLSETWUNDHOZVICQ) (BKJ) (GXY) (MPR)</td></tr>
+<tr><td>Beta rotor</td><td>(ALBEVFCYODJWUGNMQTZSKPR) (HIX)</td></tr>
+<tr><td>Gamma rotor</td><td>(AFNIRLBSQWVXGUZDKMTPCOYJHE)</td></tr>
+
+</tbody></table> 
+</p><p>
+These tables specify the effect of the rotors when the ring setting is 
+A, and when the rotor is also at position A. Note that the tables  are 
+set out so as to specify how the rotor transforms the input (current 
+coming from the right) into output (sending current to the left).
+The Enigma encryption process also involves the  current passing back 
+again, rightwards, through the rotors. To trace the effect of the rotors
+ in this stage you must apply the inverses of the permutations in the 
+tables.
+</p><p>
+</p><h2>Technical specifications of the Enigma reflectors</h2>
+The reflectors of the Enigma can be specified most easily in the cycle representation:
+ <p>
+<table border="1" cellpadding="6">
+<tbody><tr><td>reflector B</td><td>(AY) (BR) (CU) (DH) (EQ) (FS) (GL) (IP) (JX) (KN) (MO) (TZ)  (VW)</td></tr>
+<tr><td>reflector C</td><td>(AF) (BV) (CP) (DJ) (EI) (GO) (HY) (KR) (LZ) (MX) (NW) (TQ)  (SU)</td></tr>
+<tr><td>reflector B Dünn</td><td>(AE) (BN) (CK) (DQ) (FU) (GY) (HW) (IJ) (LO) (MP) (RX) (SZ) (TV)  </td></tr>
+<tr><td>reflector C Dünn</td><td>(AR) (BD) (CO) (EJ) (FN) (GT) (HK) (IV) (LM) (PW) (QZ) (SX)  (UY)</td></tr>
+</tbody></table>
+</p><h2>Technical specifications of the stepping mechanism</h2>
+<p>
+The rotors also differed in where they had the effect of knocking on the slower-moving rotor to the left.  </p><p>
+These points can be specified in terms of which letter appears in the window when the knock-on occurs:</p><p>
+ <table border="1" cellpadding="6">
+<tbody><tr><td>Rotor I</td><td>at R</td></tr>
+<tr><td>Rotor II</td><td>at F</td></tr>
+<tr><td>Rotor III</td><td>at W</td></tr>
+<tr><td>Rotor IV</td><td>at K</td></tr>
+<tr><td>Rotor V</td><td>at A</td></tr>
+<tr><td>Rotors VI, VII and VIII</td><td>at A and at N</td></tr>
+</tbody></table></p><p>
+At Bletchley Park the letters R, F, W, K, A were impressed on the cryptanalysts' minds by the mnemonic: <em>Royal Flags Wave Kings Above.</em> </p><p>
+The beta and gamma rotors, introduced in 1942 to complicate the U-boat 
+Enigma, could only be used in the fourth position and so did not have 
+knock-on effects. 
+</p><p></p><hr><br><p>
+This information was compiled by Tony Sale from the Enigma machines in 
+the Bletchley Park Museum. You will find that it agrees with the table 
+of rotors and reflectors given on page 113 of  F. L. Bauer's excellent 
+book <a href="https://www.amazon.co.uk/exec/obidos/ASIN/3540604189/alanturingwebsit"><cite>Decrypted Secrets,</cite></a> (Second edition, Springer, 2000) [although there are two misprints in that table.]
+</p><p>
+To see how these rotors played their role in Enigma encipherment, continue to <a href="https://www.codesandciphers.org.uk/enigma/example1.htm">this page with an example of the basic Enigma at work.</a>  
+</p><p>
+Further technical and historical information will appear shortly, 
+together with an on-line Enigma simulator incorporating these 
+permutations.</p><p>
+
+
+</p><hr><br><p>
+<table width="100%" cellpadding="8"><tbody><tr bgcolor="#e0e0d0"><td colspan="2"><font face="verdana">
+This page was created by Tony Sale 
+the original curator of the Bletchley Park Museum, and Secretary of the Bletchley Park Heritage Society.
+</font></td>
+<td><font face="verdana">
+Technical assistance from <a href="https://www.synth.co.uk/">Andrew Hodges</a></font></td></tr></tbody></table>
+
+
+
+
+</p></font></body></html>
