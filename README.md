@@ -22,3 +22,5 @@ https://enigma.hoerenberg.com/index.php?cat=The%20U534%20messages&page=P1030681
 
 https://www.artstation.com/artwork/wJgK5O
 https://sketchfab.com/3d-models/enigma-machine-30b85c037a164174a109ad6f002b9c47
+
+"Enigma Machine" (https://skfb.ly/oBwzU) by ASHISH is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).

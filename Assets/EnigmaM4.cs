@@ -16,7 +16,7 @@ public class EnigmaM4 : MonoBehaviour
     public RotorControl reflectorTHIN;
 
     public SteckerControl _stecker;
-    string[] alphabet = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+    const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     private char lastDecoded; //in the M4 machine, this should be set AFTER SteckerControl
     public char LastDecoded { get { return lastDecoded; } private set {lastDecoded = value; OnCharacterDecoded.Invoke(value); }}
@@ -44,41 +44,30 @@ public class EnigmaM4 : MonoBehaviour
     }
 
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            bool next = positionRIGHT.Step(true);
-            next = positionMIDDLE.Step(next);
-            next = positionLEFT.Step(next);
-            //rotorTHIN does not get rotated
-            //reflectTHIN does not get rotated
-
-            Debug.Log("new rotor positions: " + positionLEFT.ringPosition + positionMIDDLE.ringPosition + positionRIGHT.ringPosition);
-        }
-
-        foreach (var l in alphabet)
-        {
-            if (Input.GetKeyDown(l))
-            {
-                Convert(l[0]);
-            }
-        }
-    }
-
     public char Convert(char ch)
     {
         char beforeStecker = Char.ToUpper(ch);
-        char afterStecker = _stecker.convert(beforeStecker);
-        positionRIGHT.InputCharacter(afterStecker);
+        if (alphabet.IndexOf(beforeStecker) == -1) { return '\0'; } //enigma only encrypts the 26 letters in alphabet
 
-        Debug.Log(ch + " -> " + lastDecoded);
+        //first, do the stepping mechanism
+        Step();
+
+        char afterStecker = _stecker.convert(beforeStecker);
+        positionRIGHT.InputCharacter(afterStecker); //this call cascades through the rotors and back
+
+        //before this code was reached, the lastDecoded property has been set and an event has been fired
+        //Debug.Log(ch + " -> " + lastDecoded);
         return lastDecoded;
     }
 
     //
-    public void RotateRightMost()
+    public void Step()
     {
-
+        bool next = positionRIGHT.Step(true);
+        next = positionMIDDLE.Step(next);
+        next = positionLEFT.Step(next);
+        //rotorTHIN does not get rotated
+        //reflectTHIN does not get rotated
+        //Debug.Log("new rotor positions: " + positionLEFT.ringPosition + positionMIDDLE.ringPosition + positionRIGHT.ringPosition);
     }
 }
