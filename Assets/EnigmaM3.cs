@@ -14,6 +14,8 @@ public class EnigmaM3: MonoBehaviour {
 
     //M3 did not have steckern
     //public SteckerControl _stecker;
+    public CharacterEvent OnCharacterDecoded;
+    public char LastDecoded { get => LastDecoded; private set { LastDecoded = value; OnCharacterDecoded.Invoke(LastDecoded); } }
 
     // Use this for initialization
     void Start() {
@@ -33,6 +35,7 @@ public class EnigmaM3: MonoBehaviour {
     }
 
     string[] alphabet = { "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" };
+    /*
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
@@ -54,6 +57,30 @@ public class EnigmaM3: MonoBehaviour {
             }
         }
     }
+    */
 
+    public char Convert(char ch)
+    {
+        //no stecker
+
+        //first, do the stepping mechanism
+        Step();
+
+        positionRIGHT.InputCharacter(Char.ToUpper(ch)); //this call cascades through the rotors and back
+
+        //before this code was reached, the lastDecoded property has been set and an event has been fired
+        //Debug.Log(ch + " -> " + lastDecoded);
+        return LastDecoded;
+    }
+
+    private void Step()
+    {
+        bool next = positionRIGHT.Step(true);
+        next = positionMIDDLE.Step(next);
+        next = positionLEFT.Step(next);
+        //rotorTHIN does not get rotated
+        //reflectTHIN does not get rotated
+        //Debug.Log("new rotor positions: " + positionLEFT.ringPosition + positionMIDDLE.ringPosition + positionRIGHT.ringPosition);
+    }
 
 }

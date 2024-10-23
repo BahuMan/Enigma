@@ -18,15 +18,15 @@ public class EnigmaM4 : MonoBehaviour
     public SteckerControl _stecker;
     const string alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    private char lastDecoded; //in the M4 machine, this should be set AFTER SteckerControl
-    public char LastDecoded { get { return lastDecoded; } private set {lastDecoded = value; OnCharacterDecoded.Invoke(value); }}
+    private char _lastDecoded;
+    public char LastDecoded { get { return _lastDecoded; } private set { _lastDecoded = value; OnCharacterDecoded.Invoke(value); }}
     public CharacterEvent OnCharacterDecoded;
 
     // Use this for initialization
     void Start()
     {
         positionRIGHT.OnCharacterOut.AddListener(c => { positionMIDDLE.InputCharacter(c); });
-        positionRIGHT.OnCharacterOutReverse.AddListener(c => { lastDecoded = _stecker.convert(c);  MessageText.SetText("output from rotor1 = " + lastDecoded); });
+        positionRIGHT.OnCharacterOutReverse.AddListener(c => { LastDecoded = _stecker.convert(c); });
 
         positionMIDDLE.OnCharacterOut.AddListener(c => { positionLEFT.InputCharacter(c); });
         positionMIDDLE.OnCharacterOutReverse.AddListener(c => { positionRIGHT.InputCharacterReverse(c); });
@@ -56,12 +56,12 @@ public class EnigmaM4 : MonoBehaviour
         positionRIGHT.InputCharacter(afterStecker); //this call cascades through the rotors and back
 
         //before this code was reached, the lastDecoded property has been set and an event has been fired
-        //Debug.Log(ch + " -> " + lastDecoded);
-        return lastDecoded;
+        //Debug.Log(ch + " -> " + LastDecoded);
+        return LastDecoded;
     }
 
     //
-    public void Step()
+    private void Step()
     {
         bool next = positionRIGHT.Step(true);
         next = positionMIDDLE.Step(next);

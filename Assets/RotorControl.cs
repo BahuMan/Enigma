@@ -89,10 +89,15 @@ public class RotorControl: MonoBehaviour {
     }
 
     //returns true of the notch was engaged (that means the next rotor should also step)
-    //TODO: take _ringStellingIndex into account, because the labels (and therefor the position relative to the notch) changes
+    //TODO: take _ringStellingIndex into account,
+    //      SEE file:///G:/Projects/Unity/Enigma/example/The%20Enigma%20-%202.htm bottom of the page
     public bool Step(bool previousRingCaught)
     {
         bool pushNextRotor = notches.IndexOf(ringPosition) != -1;
+        if (pushNextRotor)
+        {
+            Debug.Log("Double step for " + this.gameObject.name);
+        }
         if (previousRingCaught || pushNextRotor) //this rotor will also rotate when the next rotor should push because of double-step
         {
             _ringPositionIndex = (_ringPositionIndex + 1) % ALPHABET.Length;
