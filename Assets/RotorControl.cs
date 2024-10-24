@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
@@ -89,14 +90,21 @@ public class RotorControl: MonoBehaviour {
     }
 
     //returns true of the notch was engaged (that means the next rotor should also step)
-    //TODO: take _ringStellingIndex into account,
+    //NOT TODO: take _ringStellingIndex into account,
     //      SEE file:///G:/Projects/Unity/Enigma/example/The%20Enigma%20-%202.htm bottom of the page
+    //      I don't understand why it works correctly after all, but stepping seems to work ¯\_(ツ)_/¯
     public bool Step(bool previousRingCaught)
     {
-        bool pushNextRotor = notches.IndexOf(ringPosition) != -1;
+        //off-by-one errors are one of 2 most difficult problems to solve
+        //(together with name-giving and cache invalidation)
+        //I need to check the NEXT letter on the ring to check for a stepping-notch
+        char offset = ALPHABET.ElementAt(((int)ringPosition - 'A' + 1) % ALPHABET.Length);
+
+        //if the letter in 'offset' is now either one of the notches, STEP
+        bool pushNextRotor = notches.IndexOf(offset) != -1;
         if (pushNextRotor)
         {
-            Debug.Log("Double step for " + this.gameObject.name);
+            Debug.Log("Double step for " + this.gameObject.name + " at " + offset);
         }
         if (previousRingCaught || pushNextRotor) //this rotor will also rotate when the next rotor should push because of double-step
         {

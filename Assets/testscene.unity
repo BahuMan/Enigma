@@ -172,7 +172,7 @@ MonoBehaviour:
   _ringStellungIndex: 0
   ringPosition: 65
   _ringPositionIndex: 0
-  notches: J
+  notches: K
   OnCharacterOut:
     m_PersistentCalls:
       m_Calls: []
@@ -2114,7 +2114,7 @@ MonoBehaviour:
   _ringStellungIndex: 0
   ringPosition: 65
   _ringPositionIndex: 0
-  notches: Q
+  notches: 
   OnCharacterOut:
     m_PersistentCalls:
       m_Calls: []
@@ -2326,9 +2326,9 @@ MonoBehaviour:
   wiring: JPGVOUMFYQBENHZRDKASXLICTW
   ringStellung: 69
   _ringStellungIndex: 4
-  ringPosition: 69
-  _ringPositionIndex: 4
-  notches: ZM
+  ringPosition: 83
+  _ringPositionIndex: 18
+  notches: AN
   OnCharacterOut:
     m_PersistentCalls:
       m_Calls: []
@@ -4870,9 +4870,9 @@ MonoBehaviour:
   wiring: VZBRGITYUPSDNHLXAWMJQOFECK
   ringStellung: 80
   _ringStellungIndex: 15
-  ringPosition: 65
-  _ringPositionIndex: 0
-  notches: Z
+  ringPosition: 68
+  _ringPositionIndex: 3
+  notches: A
   OnCharacterOut:
     m_PersistentCalls:
       m_Calls: []
@@ -5065,7 +5065,7 @@ MonoBehaviour:
   _ringStellungIndex: 0
   ringPosition: 65
   _ringPositionIndex: 0
-  notches: ZM
+  notches: AN
   OnCharacterOut:
     m_PersistentCalls:
       m_Calls: []
@@ -5109,7 +5109,7 @@ MonoBehaviour:
   _ringStellungIndex: 0
   ringPosition: 65
   _ringPositionIndex: 0
-  notches: E
+  notches: F
   OnCharacterOut:
     m_PersistentCalls:
       m_Calls: []
@@ -5735,7 +5735,7 @@ MonoBehaviour:
   _ringStellungIndex: 0
   ringPosition: 65
   _ringPositionIndex: 0
-  notches: V
+  notches: W
   OnCharacterOut:
     m_PersistentCalls:
       m_Calls: []
@@ -5989,9 +5989,9 @@ MonoBehaviour:
   wiring: LEYJVCNIXWPBQMDRTAKZGFUHOS
   ringStellung: 69
   _ringStellungIndex: 4
-  ringPosition: 78
-  _ringPositionIndex: 13
-  notches: Q
+  ringPosition: 67
+  _ringPositionIndex: 2
+  notches: 
   OnCharacterOut:
     m_PersistentCalls:
       m_Calls: []
@@ -6570,9 +6570,9 @@ MonoBehaviour:
   wiring: FKQHTLXOCBJSPDZRAMEWNIUYGV
   ringStellung: 76
   _ringStellungIndex: 11
-  ringPosition: 77
-  _ringPositionIndex: 12
-  notches: ZM
+  ringPosition: 90
+  _ringPositionIndex: 25
+  notches: AN
   OnCharacterOut:
     m_PersistentCalls:
       m_Calls: []
@@ -6865,7 +6865,7 @@ MonoBehaviour:
   _ringStellungIndex: 0
   ringPosition: 65
   _ringPositionIndex: 0
-  notches: Q
+  notches: R
   OnCharacterOut:
     m_PersistentCalls:
       m_Calls: []
